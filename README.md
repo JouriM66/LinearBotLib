@@ -8,6 +8,7 @@ Library: aiogram
 Allow user to programm bot logic in usual, linear way without fighting with asyncronous telegram<->API conversation model.
 
 ```python
+class Logic(ILogic):
     async def main(self, chat: BotChat, params: str) -> None:
         chat.user().name = chat.last.from_user.full_name
         name = chat.user().name
@@ -15,7 +16,7 @@ Allow user to programm bot logic in usual, linear way without fighting with asyn
         await logic_CALC(chat, name)
 
         if params:
-            pstr = f'\nYou started me with parameters *"{escape_md(params)}"*, but I dont support any рџ·\n\n'
+            pstr = f'\nYou started me with parameters *"{escape_md(params)}"*, but I dont support any 😷\n\n'
         else:
             pstr = ''
 
@@ -29,9 +30,9 @@ Allow user to programm bot logic in usual, linear way without fighting with asyn
         while True:
             rc = await chat.menu(
                 'Choose test group to go',
-                [[('вћЎ Menu tests...', 'menu')],
-                 [('вќ“ Some asking', 'ask'), ('вњЊ Funny one :)', 'wait'), ('рџЌ±', 'calc')],
-                 [('вќЊ Close', 0), ('вќЊ Cancel', 0), ('вќЋ Abandon!', 0), ('вћ° F* off!!', 0)],
+                [[('➡ Menu tests...', 'menu')],
+                 [('❓ Some asking', 'ask'), ('✌ Funny one :)', 'wait'), ('🍱', 'calc')],
+                 [('❌ Close', 0), ('❌ Cancel', 0), ('❎ Abandon!', 0), ('➰ F* off!!', 0)],
                  ],
                 remove_unused=True
             )
@@ -48,7 +49,7 @@ Allow user to programm bot logic in usual, linear way without fighting with asyn
                 break
 
         await titleMsg.delete()
-        await chat.say(f'Calm down mate!\nIts all done already.\nSee you рџ‘‹', wait_delay=1)
+        await chat.say(f'Calm down mate!\nIts all done already.\nSee you 👋', wait_delay=1)
         await chat.say(f'...btw, if you wanna reply you can use "/start" command.', wait_delay=2)
         await chat.say(f'Just saying...')
 ```
