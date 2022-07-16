@@ -1,8 +1,8 @@
 # LinearBotLib
-Library based on *aiogram* to simplify develop Telegram bots.
+Library based on **aiogram** to simplify develop Telegram bots.
 
 # Requirements
-Library: aiogram
+Library: **__aiogram__**
 
 # Goals
 Allow user to programm bot logic in usual, linear way without fighting with asyncronous telegram<->API conversation model.
@@ -54,6 +54,14 @@ class Logic(ILogic):
         await chat.say(f'Just saying...')
 ```
 
+# Usage
+
+  1. Rename ``token.api.template`` to ``token.api``
+  2. Edit ``token.api`` and put your API key to ``key=`` value
+  3. Run main.py
+  4. Connect to your bot and see all examples by yourself
+
 # License
 Fully free to use, modify and whatever
+
 No responsibility tho
