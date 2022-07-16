@@ -1,0 +1,6 @@
+# bot auth key in form: key=<value>
+# The "key=" text must be without spaces betweek "key" and "="
+#
+key=123456:ABCDEFG
+name=MySuperBot
+
